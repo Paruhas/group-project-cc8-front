@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../components/navbar";
-import TopicList from "../components/TopicList";
+import SearchList from "../components/SearchList";
 import PinBar from "../components/PinBar";
 import RoomBar from "../components/RoomBar";
 
 import { HomeIcon, PencilIcon } from "@heroicons/react/outline";
 
-function HomePage() {
+function SearchPage() {
   return (
     <div>
       <div>
@@ -17,15 +17,14 @@ function HomePage() {
         <div className="content-body-room">
           <RoomBar />
         </div>
-        <TopicList className="content-body-topic" />
+        <SearchList className="content-body-topic" />
         <div className="content-body-pin">
           <PinBar />
         </div>
         <div className="margin-left"></div>
       </div>
-      <div class="h-16"></div>
     </div>
   );
 }
 
-export default HomePage;
+export default SearchPage;

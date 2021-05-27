@@ -1,15 +1,14 @@
 import React from "react";
-import Navbar from "../components/navbar";
-import TopicList from "../components/TopicList";
+import Topic from "../components/Topic";
 import PinBar from "../components/PinBar";
 import RoomBar from "../components/RoomBar";
-
+import Navbar from "../components/navbar";
 import { HomeIcon, PencilIcon } from "@heroicons/react/outline";
 
-function HomePage() {
+function TopicPage() {
   return (
     <div>
-      <div>
+      <div className="header">
         <Navbar Icon={HomeIcon} Icon2={PencilIcon} />
       </div>
       <div className="content-body">
@@ -17,7 +16,7 @@ function HomePage() {
         <div className="content-body-room">
           <RoomBar />
         </div>
-        <TopicList className="content-body-topic" />
+        <Topic className="content-body-topic" />
         <div className="content-body-pin">
           <PinBar />
         </div>
@@ -28,4 +27,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default TopicPage;
