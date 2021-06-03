@@ -16,6 +16,8 @@ import RoomListsTopicPage from "./pages/RoomListsTopicPage";
 import EditTopicPage from "./pages/EditTopicPage";
 import AllTopicsPage from "./pages/AllTopicsPage";
 import SearchPage from "./pages/SearchPage";
+import EditProfilePage from "./pages/EditProfilePage";
+import ChangePasswordPage from "./pages/ChangePasswordPage";
 
 const adminRoutes = [
   {
@@ -25,6 +27,14 @@ const adminRoutes = [
   {
     path: "/create-topic",
     component: CreateTopicPage,
+  },
+  {
+    path: "/edit-my-profile",
+    component: EditProfilePage,
+  },
+  {
+    path: "/change-password",
+    component: ChangePasswordPage,
   },
   {
     path: "/edit-topic/:id",
@@ -64,6 +74,14 @@ const userRoutes = [
   {
     path: "/me",
     component: MyPage,
+  },
+  {
+    path: "/edit-my-profile",
+    component: EditProfilePage,
+  },
+  {
+    path: "/change-password",
+    component: ChangePasswordPage,
   },
   {
     path: "/create-topic",

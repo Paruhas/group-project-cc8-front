@@ -14,6 +14,7 @@ import { UserIcon } from "@heroicons/react/outline";
 import { BookOpenIcon } from "@heroicons/react/outline";
 
 import WebLogo from "../public/images/Icon_01.png";
+import Swal from "sweetalert2";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -70,8 +71,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-
-import Swal from "sweetalert2";
 
 function Navbar({ Icon, Icon2 }) {
   const [search, setSearch] = useState("");

@@ -230,11 +230,18 @@ function UserTopicList() {
                 objectPosition: "50% 50%",
               }}
             />
-            <a
-            // onClick={() => console.log(user.id)}
-            >
-              <h1>{user.username}</h1>{" "}
-            </a>
+            <h1>
+              <strong>{user.username}</strong>
+            </h1>{" "}
+            <div>
+              <a onClick={() => history.push("/edit-my-profile")}>
+                edit profile
+              </a>
+              &nbsp;|&nbsp;
+              <a onClick={() => history.push("/change-password")}>
+                chang password
+              </a>
+            </div>
           </div>
         </div>
 

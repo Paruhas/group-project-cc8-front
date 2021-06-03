@@ -31,7 +31,7 @@
 .roomBar-container-header-dashLine {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 35%;
   height: auto;
 }
 
@@ -42,6 +42,7 @@
 
 .roomBar-container-header-dashLine-text {
   color: #aaaaaa;
+  width: auto;
 }
 
 .roomBar-container-header-dashLine-text-padding {
