@@ -28,10 +28,13 @@ function Register() {
     setInput((prev) => ({ ...prev, [name]: value }));
     console.log(input);
   };
-  console.log("input", input);
+  // console.log("input", input);
 
   const validateInput = () => {
     const newError = {};
+
+    if (!input.oldPassword || !input.oldPassword.trim())
+      newError.oldPassword = "Old Password is required.";
 
     if (!input.password || !input.password.trim())
       newError.password = "Password is required.";
@@ -39,14 +42,17 @@ function Register() {
     if (input.password !== input.confirmPassword)
       newError.confirmPassword =
         "Password and confirm password are not matched.";
+
     setError(newError);
     console.log(error);
   };
+
   const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
-      e.preventDefault();
       console.log("submit");
       validateInput();
+      console.log(error);
 
       setIsLoading(true);
 
@@ -102,13 +108,31 @@ function Register() {
 
         <form onSubmit={handleSubmit}>
           <div className="form-div">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Old Password</label>
+
+            <input
+              className="form-div"
+              type="password"
+              name="oldPassword"
+              placeholder="Old Password"
+              value={input.oldPassword}
+              onChange={handleInputChange}
+            />
+            {error.oldPassword ? (
+              <div style={{ fontSize: "12px", color: "red" }}>
+                {error.oldPassword}
+              </div>
+            ) : null}
+          </div>
+          <br />
+          <div className="form-div">
+            <label htmlFor="password">New Password</label>
 
             <input
               className="form-div"
               type="password"
               name="password"
-              placeholder="Password"
+              placeholder="New Password"
               value={input.password}
               onChange={handleInputChange}
             />
@@ -120,14 +144,14 @@ function Register() {
           </div>
           <br />
           <div className="form-div">
-            <label htmlFor="confirmPassword">Confirm Password</label>
+            <label htmlFor="confirmPassword">Confirm New Password</label>
 
             <div>
               <input
                 className="form-div"
                 type="password"
                 name="confirmPassword"
-                placeholder="Confirm Password"
+                placeholder="Confirm New Password"
                 value={input.confirmPassword}
                 onChange={handleInputChange}
               />

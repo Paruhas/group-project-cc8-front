@@ -11,15 +11,7 @@ function ChangePasswordPage() {
         <Navbar Icon={HomeIcon} Icon2={PencilIcon} />
       </div>
       <div className="content-body">
-        <div className="margin-right"></div>
-        <div style={{ width: "17vw" }}></div>
-
         <ChangePassword className="content-body-register" />
-        <div style={{ width: "6vw" }}></div>
-
-        {/* <div style={{ width: "17vw" }}></div> */}
-
-        <div className="margin-left"></div>
       </div>
       <div class="h-16"></div>
     </div>
